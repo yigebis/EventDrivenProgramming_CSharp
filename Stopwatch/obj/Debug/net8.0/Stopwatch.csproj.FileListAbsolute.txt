@@ -26,3 +26,4 @@ C:\Users\Dell\OneDrive\Desktop\C#\Stopwatch\obj\Debug\net8.0\refint\Stopwatch.dl
 C:\Users\Dell\OneDrive\Desktop\C#\Stopwatch\obj\Debug\net8.0\Stopwatch.pdb
 C:\Users\Dell\OneDrive\Desktop\C#\Stopwatch\obj\Debug\net8.0\Stopwatch.genruntimeconfig.cache
 C:\Users\Dell\OneDrive\Desktop\C#\Stopwatch\obj\Debug\net8.0\ref\Stopwatch.dll
+C:\Users\Dell\OneDrive\Desktop\C#\Stopwatch\obj\Debug\net8.0\Stopwatch.sourcelink.json
