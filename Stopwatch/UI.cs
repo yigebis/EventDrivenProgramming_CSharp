@@ -3,18 +3,21 @@ using System;
 class UI{
 
     public void Command(){
+        Console.ResetColor();
         Console.WriteLine(
-            @"S/s : start stopwatch 
-            \nT/t : Stop the stopwatch 
-            \nR/r : Reset the stopwatch 
-            \nPress any other key to exit
-        ");
+            @"Stopwatch app
+            S/s : start.   T/t : Stop.   R/r : Reset
+            Press any other key to exit"
+        );
+        
     }
 
     public void StartClock(int timeElapsed, string message){
         Console.Clear();
 
         Command();
+        
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("\n" + message);
         DisplayClock(timeElapsed);
     }
@@ -25,6 +28,7 @@ class UI{
                 
         Command();
 
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("\n" + message);
         DisplayClock(timeElapsed);
     }
@@ -41,8 +45,9 @@ class UI{
     public void DisplayClock(int timeElapsed){
         var minutes = TimeService.getMinutes(timeElapsed);
         var seconds = TimeService.getSeconds(timeElapsed);
+        var hours = TimeService.getHours(timeElapsed);
         
-        string displayMinutes = "", displaySeconds = "";
+        string displayMinutes = "", displaySeconds = "", displayHours = "";
         if (minutes < 10){
             displayMinutes = "0" + minutes;
         }
@@ -57,6 +62,13 @@ class UI{
             displaySeconds += seconds;
         }
 
-        Console.WriteLine(displayMinutes + ":" + displaySeconds);
+        if (hours < 10){
+            displayHours = "0" + hours;
+        }
+        else{
+            displayHours += hours;
+        }
+
+        Console.WriteLine(displayHours + ":" + displayMinutes + ":" + displaySeconds);
     }
 }
